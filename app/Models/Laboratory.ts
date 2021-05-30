@@ -1,4 +1,6 @@
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, ManyToMany, manyToMany, column } from '@ioc:Adonis/Lucid/Orm'
+
+import { Examination } from 'App/Models'
 
 export default class Laboratory extends BaseModel {
   @column({ isPrimary: true })
@@ -12,4 +14,7 @@ export default class Laboratory extends BaseModel {
 
   @column()
   public isActive: boolean
+
+  @manyToMany(() => Examination)
+  public examinations: ManyToMany<typeof Examination>
 }
