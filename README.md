@@ -3,7 +3,7 @@
 Está aplicação está utilizando Nodejs com AdonisJs, a arquitetura dela é Model Controller. Com ela podemos manipular o banco de dados
 com o Lucid que por baixo dos panos roda o Knex.JS para fazer as operações de banco e criar tabelas.
 
-A documentação eu optei por utilizar diretamente no insomnia, pois fica menos poluído o código.
+A documentação eu optei por utilizar diretamente no insomnia, pois fica menos poluído o código. E também na própria aplicação utilizo o TypeScript que ajuda no AutoComplete.
 
 Utilizei o Docker para subir o banco de dados Postgresql.
 
