@@ -7,6 +7,8 @@ A documentação eu optei por utilizar diretamente no insomnia, pois fica menos 
 
 Utilizei o Docker para subir o banco de dados Postgresql.
 
+A aplicação foi hospedada no Heroku `https://nodejs-api-exames-laboratorios.herokuapp.com`
+
 - Api NodeJS - [WebSite](https://adonisjs.com/)
 
 ---
