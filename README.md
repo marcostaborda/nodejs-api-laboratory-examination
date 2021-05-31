@@ -32,6 +32,8 @@ Utilizei o Docker para subir o banco de dados Postgresql.
   - `dev_local` - se estiver rodando localmente
   - `dev_heroku` - para rodar a aplicação do Heroku - Pode demorar uns minutos para acordar o servidor.
 - Dentro do Insomnia tem a aba Docs como pode ser visto na imagem abaixo. Nele contém o que cada rota executa na API.
-  ![Alt text](docs/insomniaDocImage.png?raw=true 'Title')
+
+  <img src="docs/insomniaDocImage.png?raw=true" alt="Image Docs Insomnia" style="width: 500px"/>
+
 - Para ver as rotas direto na aplicação tem que rodar o comando `node ace list:routes`
 - Se rodar o comando `node ace list:routes --json > routes.json` a aplicação gera um json na raiz do projeto com todas as rotas também.
