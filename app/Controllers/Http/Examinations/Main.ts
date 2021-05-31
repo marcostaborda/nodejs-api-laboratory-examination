@@ -18,29 +18,41 @@ export default class ExaminationController {
     return examination
   }
 
-  public async show({ params }: HttpContextContract) {
-    const lab = await Examination.findOrFail(params.id)
+  public async show({ params, response }: HttpContextContract) {
+    try {
+      const lab = await Examination.findOrFail(params.id)
 
-    return lab
+      return lab
+    } catch {
+      return response.notFound({ message: 'examination is not found' })
+    }
   }
 
-  public async update({ request, params }: HttpContextContract) {
+  public async update({ request, params, response }: HttpContextContract) {
     const data = await request.validate(StoreValidator)
 
-    const examination = await Examination.findOrFail(params.id)
+    try {
+      const examination = await Examination.findOrFail(params.id)
 
-    examination.merge(data)
+      examination.merge(data)
 
-    await examination.save()
+      await examination.save()
 
-    return examination
+      return examination
+    } catch (error) {
+      return response.notFound({ message: 'examination is not found' })
+    }
   }
 
-  public async destroy({ params }: HttpContextContract) {
-    const lab = await Examination.findOrFail(params.id)
+  public async destroy({ params, response }: HttpContextContract) {
+    try {
+      const lab = await Examination.findOrFail(params.id)
 
-    lab.isActive = false
+      lab.isActive = false
 
-    await lab.save()
+      await lab.save()
+    } catch (error) {
+      return response.notFound({ message: 'examination is not found' })
+    }
   }
 }

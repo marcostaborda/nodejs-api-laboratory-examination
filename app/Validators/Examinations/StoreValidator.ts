@@ -8,7 +8,7 @@ export class StoreValidator {
 	}
 	public schema = schema.create({
 		name: schema.string({ trim: true }),
-		type_exam: schema.enum(typeExaminations)
+		typeExam: schema.enum(typeExaminations)
 	})
 	public messages = {}
 }

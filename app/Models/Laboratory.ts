@@ -12,7 +12,7 @@ export default class Laboratory extends BaseModel {
   @column()
   public address: string
 
-  @column()
+  @column({ serializeAs: null })
   public isActive: boolean
 
   @manyToMany(() => Examination)

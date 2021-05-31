@@ -13,7 +13,7 @@ export default class Examination extends BaseModel {
   @column()
   public typeExam: TypeExamination
 
-  @column()
+  @column({ serializeAs: null })
   public isActive: boolean
 
   @manyToMany(() => Laboratory)
