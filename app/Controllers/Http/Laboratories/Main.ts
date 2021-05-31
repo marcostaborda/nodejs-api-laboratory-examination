@@ -18,8 +18,11 @@ export default class LaboratoryController {
     return lab
   }
 
-  public async show({ params }: HttpContextContract) {
-    const lab = await Laboratory.findOrFail(params.id)
+  public async show({ params, response }: HttpContextContract) {
+    const lab = await Laboratory.find(params.id)
+
+    if (!lab)
+      return response.notFound({ message: 'laboratory is no found' })
 
     return lab
   }
@@ -36,8 +39,11 @@ export default class LaboratoryController {
     return lab
   }
 
-  public async destroy({ params }: HttpContextContract) {
-    const lab = await Laboratory.findOrFail(params.id)
+  public async destroy({ params, response }: HttpContextContract) {
+    const lab = await Laboratory.find(params.id)
+
+    if (!lab)
+      return response.notFound({ message: 'laboratory is no found' })
 
     lab.isActive = false
 
