@@ -1,4 +1,4 @@
-- Construir uma API para manutenção de laboratórios e exames.
+# Construir uma API para manutenção de laboratórios e exames.
 
 ## Contexto
 
@@ -42,7 +42,7 @@ Estamos desenvolvendo uma aplicação para as seguintes situações:
 
 ## Requisitos técnicos
 
-- Desenvolver usando _Node.js_
+- Desenvolver usando `Node.js`
 - Serviço deve respeitar os princípios RESTFul
 - Criar um `README.md` (arquitetura, instruções de uso, entre outros)
 
@@ -51,7 +51,3 @@ Estamos desenvolvendo uma aplicação para as seguintes situações:
 - Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc)
 - Configurar a aplicação para rodar em um container
 - Documentação da API
-
-Se tiver alguma dúvida, fique a vontade para nos questionar!
-Boa sorte! :)
-Atenciosamente,
